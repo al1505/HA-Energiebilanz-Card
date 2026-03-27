@@ -1,4 +1,4 @@
-# Energiebilanz-Card für Home Assistant
+# ALs Energiebilanz Card
 
 [![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=al1505&repository=HA-Energiebilanz-Card&category=plugin)
 
@@ -28,10 +28,13 @@ Alternativ:
 
 ### Methode 2: Manuell
 
-1. Lade die Datei `energiebilanz-card.js` herunter.
-2. Lege die Datei in deinen Ordner `www/` in Home Assistant (meist `/config/www/`).
-3. Gehe zu Einstellungen -> Dashboards -> Drei-Punkte-Menü -> Ressourcen.
-4. Füge eine neue Ressource hinzu: URL `/local/HA-Energiebilanz-Card.js`, Typ `JavaScript-Modul`.
+1. Lade die Datei `ha-energiebilanz-card.js` herunter.
+2. Erstelle in Home Assistant den Ordnerpfad `/config/www/community/ha-energiebilanz-card/` (falls noch nicht vorhanden).
+3. Lege die JS-Datei genau dort ab.
+4. Gehe in Home Assistant zu Einstellungen -> Dashboards -> Drei-Punkte-Menü oben rechts -> Ressourcen.
+5. Füge eine neue Ressource hinzu: 
+   * URL: `/local/community/ha-energiebilanz-card/ha-energiebilanz-card.js`
+   * Typ: `JavaScript-Modul`
 
 ## 🛠️ Konfiguration
 
