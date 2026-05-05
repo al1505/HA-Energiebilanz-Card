@@ -61,35 +61,17 @@ Gehe in dein Dashboard, klicke auf "Karte hinzufügen" und suche nach "Energiebi
 
 ## 📸 Screenshots
 
-<details open>
-<summary><b>🖥️ 1. Desktop-Ansicht</b></summary>
+**🖥️ Desktop** — Tagesansicht · aufgeklappt · Detailansicht · Monatsansicht
 
-<img width="450" height="399" alt="Desktop — Tagesansicht" src="https://github.com/user-attachments/assets/f99d5819-6d4f-4676-92d6-913c02da0316" />
-<img width="450" height="464" alt="Desktop — Tagesansicht aufgeklappt" src="https://github.com/user-attachments/assets/0503f3c6-4da9-43a0-8fad-31fd11195655" />
-<img width="450" height="399" alt="Desktop — Detailansicht" src="https://github.com/user-attachments/assets/65c16eb4-b636-49aa-8853-c3d7ec9ab7ca" />
-<img width="450" height="383" alt="Desktop — Monatsansicht" src="https://github.com/user-attachments/assets/0be17e00-f464-450f-9f07-384260884ff8" />
+![Desktop Karussell](screenshots/desktop.gif)
 
-</details>
+**📱 Mobile** — Tagesansicht · Details · Monatsansicht · Monatsdetails
 
-<details>
-<summary><b>📱 2. Mobile-Ansicht</b></summary>
+![Mobile Karussell](screenshots/mobile.gif)
 
-![Mobile — Tagesansicht](https://github.com/user-attachments/assets/dc48830a-6681-4767-88e3-56731433a2c8)
-![Mobile — Tagesdetails](https://github.com/user-attachments/assets/543b602d-4fbd-46c9-8d94-07ff1417015a)
-![Mobile — Monatsansicht](https://github.com/user-attachments/assets/b0f979f7-f72c-4834-b1ea-18f4aa8ef0c0)
-![Mobile — Monatsdetails](https://github.com/user-attachments/assets/d412c79b-5ad7-4859-b761-c99d02f4c57d)
+**⚙️ Konfiguration** — Haupt-Sensoren · Vollansicht · Kompakt · Sub-Einträge
 
-</details>
-
-<details>
-<summary><b>⚙️ 3. Konfiguration (Visueller Editor)</b></summary>
-
-<img width="450" height="499" alt="Editor — Haupt-Sensoren" src="https://github.com/user-attachments/assets/09eb9ada-adc3-4528-b80a-0dcd8f58fe4e" />
-<img width="900" height="1002" alt="Editor — Vollansicht" src="https://github.com/user-attachments/assets/b9aa0c37-5a71-4a00-bf16-0cfa228be141" />
-<img width="200" height="203" alt="Editor — Kompakt" src="https://github.com/user-attachments/assets/0a06c484-d43d-4b42-a8e5-44f4d51a37a7" />
-<img width="400" height="599" alt="Editor — Sub-Einträge" src="https://github.com/user-attachments/assets/878af6a2-59cb-4d35-9981-3b0ceeb2587c" />
-
-</details>
+![Config Karussell](screenshots/config.gif)
 
 ---
 
