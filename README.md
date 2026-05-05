@@ -1,8 +1,25 @@
 # ALs Energiebilanz Card
 
+[![HACS Custom](https://img.shields.io/badge/HACS-Custom-orange.svg)](https://hacs.xyz)
+[![GitHub Release](https://img.shields.io/github/v/release/al1505/ALs-Homeassitant-Energiebilanz-Card?label=Version)](https://github.com/al1505/ALs-Homeassitant-Energiebilanz-Card/releases)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![PayPal](https://img.shields.io/badge/PayPal-Donate-0070ba?logo=paypal&style=flat-square)](https://paypal.me/al1505)
+
 [![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=al1505&repository=ALs-Homeassitant-Energiebilanz-Card&category=plugin)
 
 Eine hochperformante, interaktive Custom Card zur Visualisierung von Energieflüssen in Home Assistant. Perfekt für Photovoltaik, Batteriespeicher, Netzbezug und Hausverbrauch.
+
+---
+
+## ☕ Support
+
+Wenn dir diese Card gefällt und du die Weiterentwicklung unterstützen möchtest:
+
+[![Buy me a coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-PayPal-0070ba?logo=paypal&style=for-the-badge)](https://paypal.me/al1505)
+
+Direkt-Link: **[paypal.me/al1505](https://paypal.me/al1505)** ❤️
+
+---
 
 ## ✨ Features
 
@@ -65,9 +82,19 @@ Config:
 <img width="200" height="203" alt="image" src="https://github.com/user-attachments/assets/0a06c484-d43d-4b42-a8e5-44f4d51a37a7" />
 <img width="400" height="599" alt="image" src="https://github.com/user-attachments/assets/878af6a2-59cb-4d35-9981-3b0ceeb2587c" />
 
+---
 
+## 🙏 Danke
 
+Wenn dir die Card im Alltag hilft → freue ich mich über einen kleinen Kaffee:
 
+[![Buy me a coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-PayPal-0070ba?logo=paypal&style=for-the-badge)](https://paypal.me/al1505)
+
+**[paypal.me/al1505](https://paypal.me/al1505)** ☕
+
+---
+
+*Entwickelt mit ❤️ von [al1505](https://github.com/al1505)*
 
 
 
