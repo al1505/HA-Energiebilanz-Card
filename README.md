@@ -61,17 +61,13 @@ Gehe in dein Dashboard, klicke auf "Karte hinzufügen" und suche nach "Energiebi
 
 ## 📸 Screenshots
 
-**🖥️ Desktop** — Tagesansicht · aufgeklappt · Detailansicht · Monatsansicht
+**📊 Karte** — Tag · Monat · Jahr · Gesamt · Hover-Tooltips · Legende
 
-![Desktop Karussell](screenshots/desktop.gif)
+![Card Demo](screenshots/card-demo.gif)
 
-**📱 Mobile** — Tagesansicht · Details · Monatsansicht · Monatsdetails
+**⚙️ Editor** — Design · Texte · Sensoren · Sub-Einträge
 
-![Mobile Karussell](screenshots/mobile.gif)
-
-**⚙️ Konfiguration** — Haupt-Sensoren · Vollansicht · Kompakt · Sub-Einträge
-
-![Config Karussell](screenshots/config.gif)
+![Editor Demo](screenshots/editor-demo.gif)
 
 ---
 

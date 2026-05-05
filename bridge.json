@@ -1,0 +1,285 @@
+{
+  "$schema": "../ALs-APPs-local-chrome-tab-bridge/schema/bridge.schema.json",
+  "url": "homeassistant.local:8123",
+  "outDir": "screenshots/gif-frames",
+  "captures": [
+    {
+      "name": "g1-01-day-initial",
+      "navigate": "http://homeassistant.local:8123/dashboard-pv/pvs",
+      "prepareSteps": [
+        { "op": "waitFor", "selector": "energiebilanz-card", "timeoutMs": 3000 },
+        { "op": "waitFor", "selectorJs": "const c=dq(document,'energiebilanz-card'); return c&&dq(c.shadowRoot||c,'.hover-zone');", "timeoutMs": 3000 }
+      ],
+      "selector": "energiebilanz-card",
+      "padPx": 8
+    },
+    {
+      "name": "g1-02-day-haus-open",
+      "prepareSteps": [
+        { "op": "eval", "script": "const c=dq(document,'energiebilanz-card');const sr=c.shadowRoot||c;dq(sr,'#acc-haus').setAttribute('open','');", "deviceSettleMs": 400 }
+      ],
+      "selector": "energiebilanz-card",
+      "padPx": 8
+    },
+    {
+      "name": "g1-03-day-both-open",
+      "prepareSteps": [
+        { "op": "eval", "script": "const c=dq(document,'energiebilanz-card');const sr=c.shadowRoot||c;dq(sr,'#acc-pv').setAttribute('open','');", "deviceSettleMs": 400 }
+      ],
+      "selector": "energiebilanz-card",
+      "padPx": 8
+    },
+    {
+      "name": "g1-04-day-hover-8h",
+      "prepareSteps": [
+        { "op": "eval", "script": "const c=dq(document,'energiebilanz-card');const sr=c.shadowRoot||c;const zone=dq(sr,'.hover-zone[data-idx=\"8\"]');const svg=dq(sr,'#svg-container-alternativ');if(zone&&svg){const r=zone.getBoundingClientRect();svg.dispatchEvent(new MouseEvent('mousemove',{bubbles:true,cancelable:true,clientX:r.left+r.width/2,clientY:r.top+r.height/2}));}", "deviceSettleMs": 300 }
+      ],
+      "selector": "energiebilanz-card",
+      "padPx": 8
+    },
+    {
+      "name": "g1-05-day-bat-hidden",
+      "prepareSteps": [
+        { "op": "eval", "script": "const c=dq(document,'energiebilanz-card');const sr=c.shadowRoot||c;const tt=dq(sr,'#eb-tooltip');if(tt)tt.style.display='none';dq(sr,'.leg-item[data-id=\"batEnt\"]').click();" },
+        { "op": "waitFor", "selectorJs": "const c=dq(document,'energiebilanz-card');return c&&dq(c.shadowRoot||c,'.hover-zone');", "timeoutMs": 3000 }
+      ],
+      "selector": "energiebilanz-card",
+      "padPx": 8
+    },
+    {
+      "name": "g1-06-day-bat-shown",
+      "prepareSteps": [
+        { "op": "eval", "script": "const c=dq(document,'energiebilanz-card');dq(c.shadowRoot||c,'.leg-item[data-id=\"batEnt\"]').click();" },
+        { "op": "waitFor", "selectorJs": "const c=dq(document,'energiebilanz-card');return c&&dq(c.shadowRoot||c,'.hover-zone');", "timeoutMs": 3000 }
+      ],
+      "selector": "energiebilanz-card",
+      "padPx": 8
+    },
+    {
+      "name": "g1-07-day-may3",
+      "prepareSteps": [
+        { "op": "eval", "script": "const c=dq(document,'energiebilanz-card');const sr=c.shadowRoot||c;const inp=dq(sr,'#date-input');inp.value='2026-05-03';inp.dispatchEvent(new Event('change'));" },
+        { "op": "waitFor", "selectorJs": "const c=dq(document,'energiebilanz-card');return c&&dq(c.shadowRoot||c,'.hover-zone');", "timeoutMs": 3000 }
+      ],
+      "selector": "energiebilanz-card",
+      "padPx": 8
+    },
+    {
+      "name": "g1-08-day-may3-open",
+      "prepareSteps": [
+        { "op": "eval", "script": "const c=dq(document,'energiebilanz-card');const sr=c.shadowRoot||c;dq(sr,'#acc-pv').setAttribute('open','');dq(sr,'#acc-haus').setAttribute('open','');", "deviceSettleMs": 400 }
+      ],
+      "selector": "energiebilanz-card",
+      "padPx": 8
+    },
+    {
+      "name": "g1-09-day-may3-closed",
+      "prepareSteps": [
+        { "op": "eval", "script": "const c=dq(document,'energiebilanz-card');const sr=c.shadowRoot||c;dq(sr,'#acc-pv').removeAttribute('open');dq(sr,'#acc-haus').removeAttribute('open');", "deviceSettleMs": 400 }
+      ],
+      "selector": "energiebilanz-card",
+      "padPx": 8
+    },
+    {
+      "name": "g1-10-month-may",
+      "prepareSteps": [
+        { "op": "eval", "script": "const c=dq(document,'energiebilanz-card');dq(c.shadowRoot||c,'.eb-lvl-btn[data-lvl=\"month\"]').click();" },
+        { "op": "waitFor", "selectorJs": "const c=dq(document,'energiebilanz-card');return c&&dq(c.shadowRoot||c,'.hover-zone');", "timeoutMs": 3000 }
+      ],
+      "selector": "energiebilanz-card",
+      "padPx": 8
+    },
+    {
+      "name": "g1-11-month-hover-may3",
+      "prepareSteps": [
+        { "op": "eval", "script": "const c=dq(document,'energiebilanz-card');const sr=c.shadowRoot||c;const zone=dq(sr,'.hover-zone[data-idx=\"2\"]');const svg=dq(sr,'#svg-container-alternativ');if(zone&&svg){const r=zone.getBoundingClientRect();svg.dispatchEvent(new MouseEvent('mousemove',{bubbles:true,cancelable:true,clientX:r.left+r.width/2,clientY:r.top+r.height/2}));}", "deviceSettleMs": 300 }
+      ],
+      "selector": "energiebilanz-card",
+      "padPx": 8
+    },
+    {
+      "name": "g1-12-month-einsp-hidden",
+      "prepareSteps": [
+        { "op": "eval", "script": "const c=dq(document,'energiebilanz-card');const sr=c.shadowRoot||c;const tt=dq(sr,'#eb-tooltip');if(tt)tt.style.display='none';dq(sr,'.leg-item[data-id=\"einsp\"]').click();" },
+        { "op": "waitFor", "selectorJs": "const c=dq(document,'energiebilanz-card');return c&&dq(c.shadowRoot||c,'.hover-zone');", "timeoutMs": 3000 }
+      ],
+      "selector": "energiebilanz-card",
+      "padPx": 8
+    },
+    {
+      "name": "g1-13-month-einsp-shown",
+      "prepareSteps": [
+        { "op": "eval", "script": "const c=dq(document,'energiebilanz-card');dq(c.shadowRoot||c,'.leg-item[data-id=\"einsp\"]').click();" },
+        { "op": "waitFor", "selectorJs": "const c=dq(document,'energiebilanz-card');return c&&dq(c.shadowRoot||c,'.hover-zone');", "timeoutMs": 3000 }
+      ],
+      "selector": "energiebilanz-card",
+      "padPx": 8
+    },
+    {
+      "name": "g1-14-month-april",
+      "prepareSteps": [
+        { "op": "eval", "script": "const c=dq(document,'energiebilanz-card');dq(c.shadowRoot||c,'#date-prev').click();" },
+        { "op": "waitFor", "selectorJs": "const c=dq(document,'energiebilanz-card');return c&&dq(c.shadowRoot||c,'.hover-zone');", "timeoutMs": 3000 }
+      ],
+      "selector": "energiebilanz-card",
+      "padPx": 8
+    },
+    {
+      "name": "g1-15-month-hover-apr21",
+      "prepareSteps": [
+        { "op": "eval", "script": "const c=dq(document,'energiebilanz-card');const sr=c.shadowRoot||c;const zone=dq(sr,'.hover-zone[data-idx=\"20\"]');const svg=dq(sr,'#svg-container-alternativ');if(zone&&svg){const r=zone.getBoundingClientRect();svg.dispatchEvent(new MouseEvent('mousemove',{bubbles:true,cancelable:true,clientX:r.left+r.width/2,clientY:r.top+r.height/2}));}", "deviceSettleMs": 300 }
+      ],
+      "selector": "energiebilanz-card",
+      "padPx": 8
+    },
+    {
+      "name": "g1-16-year-2026",
+      "prepareSteps": [
+        { "op": "eval", "script": "const c=dq(document,'energiebilanz-card');const sr=c.shadowRoot||c;const tt=dq(sr,'#eb-tooltip');if(tt)tt.style.display='none';dq(sr,'.eb-lvl-btn[data-lvl=\"year\"]').click();" },
+        { "op": "waitFor", "selectorJs": "const c=dq(document,'energiebilanz-card');return c&&dq(c.shadowRoot||c,'.hover-zone');", "timeoutMs": 3000 }
+      ],
+      "selector": "energiebilanz-card",
+      "padPx": 8
+    },
+    {
+      "name": "g1-17-year-open",
+      "prepareSteps": [
+        { "op": "eval", "script": "const c=dq(document,'energiebilanz-card');const sr=c.shadowRoot||c;dq(sr,'#acc-pv').setAttribute('open','');dq(sr,'#acc-haus').setAttribute('open','');", "deviceSettleMs": 400 }
+      ],
+      "selector": "energiebilanz-card",
+      "padPx": 8
+    },
+    {
+      "name": "g1-18-year-closed",
+      "prepareSteps": [
+        { "op": "eval", "script": "const c=dq(document,'energiebilanz-card');const sr=c.shadowRoot||c;dq(sr,'#acc-pv').removeAttribute('open');dq(sr,'#acc-haus').removeAttribute('open');", "deviceSettleMs": 400 }
+      ],
+      "selector": "energiebilanz-card",
+      "padPx": 8
+    },
+    {
+      "name": "g1-19-year-hover-april",
+      "prepareSteps": [
+        { "op": "eval", "script": "const c=dq(document,'energiebilanz-card');const sr=c.shadowRoot||c;const zone=dq(sr,'.hover-zone[data-idx=\"3\"]');const svg=dq(sr,'#svg-container-alternativ');if(zone&&svg){const r=zone.getBoundingClientRect();svg.dispatchEvent(new MouseEvent('mousemove',{bubbles:true,cancelable:true,clientX:r.left+r.width/2,clientY:r.top+r.height/2}));}", "deviceSettleMs": 300 }
+      ],
+      "selector": "energiebilanz-card",
+      "padPx": 8
+    },
+    {
+      "name": "g1-20-total-view",
+      "prepareSteps": [
+        { "op": "eval", "script": "const c=dq(document,'energiebilanz-card');const sr=c.shadowRoot||c;const tt=dq(sr,'#eb-tooltip');if(tt)tt.style.display='none';dq(sr,'.eb-lvl-btn[data-lvl=\"total\"]').click();" },
+        { "op": "waitFor", "selectorJs": "const c=dq(document,'energiebilanz-card');return c&&dq(c.shadowRoot||c,'.hover-zone');", "timeoutMs": 3000 }
+      ],
+      "selector": "energiebilanz-card",
+      "padPx": 8
+    },
+    {
+      "name": "g1-21-total-hover-2026",
+      "prepareSteps": [
+        { "op": "eval", "script": "const c=dq(document,'energiebilanz-card');const sr=c.shadowRoot||c;const zones=dqa(sr,'.hover-zone');const zone=zones[zones.length-1];const svg=dq(sr,'#svg-container-alternativ');if(zone&&svg){const r=zone.getBoundingClientRect();svg.dispatchEvent(new MouseEvent('mousemove',{bubbles:true,cancelable:true,clientX:r.left+r.width/2,clientY:r.top+r.height/2}));}", "deviceSettleMs": 300 }
+      ],
+      "selector": "energiebilanz-card",
+      "padPx": 8
+    },
+    {
+      "name": "g2-e01-editor-main",
+      "navigate": "http://homeassistant.local:8123/dashboard-pv/pvs?edit=1",
+      "prepareSteps": [
+        { "op": "waitFor", "selector": "energiebilanz-card", "timeoutMs": 3000 },
+        { "op": "dispatchEditCard", "cardSelector": "energiebilanz-card", "deviceSettleMs": 2000 },
+        { "op": "waitFor", "selectorJs": "return dq(document,'energiebilanz-card-editor');", "timeoutMs": 3000, "deviceSettleMs": 400 }
+      ],
+      "selectorJs": "const d=dq(document,'hui-dialog-edit-card');if(!d)return null;const ha=dq(d.shadowRoot||d,'ha-dialog');if(!ha)return null;return dq(ha.shadowRoot||ha,'dialog');",
+      "delayMs": 200
+    },
+    {
+      "name": "g2-e02-design-open",
+      "prepareSteps": [
+        { "op": "eval", "script": "const ed=dq(document,'energiebilanz-card-editor');ed.querySelector('details#design_options').setAttribute('open','');", "deviceSettleMs": 400 }
+      ],
+      "selectorJs": "const d=dq(document,'hui-dialog-edit-card');if(!d)return null;const ha=dq(d.shadowRoot||d,'ha-dialog');if(!ha)return null;return dq(ha.shadowRoot||ha,'dialog');",
+      "delayMs": 100
+    },
+    {
+      "name": "g2-e03-design-closed",
+      "prepareSteps": [
+        { "op": "eval", "script": "const ed=dq(document,'energiebilanz-card-editor');ed.querySelector('details#design_options').removeAttribute('open');", "deviceSettleMs": 400 }
+      ],
+      "selectorJs": "const d=dq(document,'hui-dialog-edit-card');if(!d)return null;const ha=dq(d.shadowRoot||d,'ha-dialog');if(!ha)return null;return dq(ha.shadowRoot||ha,'dialog');",
+      "delayMs": 100
+    },
+    {
+      "name": "g2-e04-lang-open",
+      "prepareSteps": [
+        { "op": "eval", "script": "const ed=dq(document,'energiebilanz-card-editor');ed.querySelector('details#lang_overrides').setAttribute('open','');", "deviceSettleMs": 400 }
+      ],
+      "selectorJs": "const d=dq(document,'hui-dialog-edit-card');if(!d)return null;const ha=dq(d.shadowRoot||d,'ha-dialog');if(!ha)return null;return dq(ha.shadowRoot||ha,'dialog');",
+      "delayMs": 100
+    },
+    {
+      "name": "g2-e05-lang-closed",
+      "prepareSteps": [
+        { "op": "eval", "script": "const ed=dq(document,'energiebilanz-card-editor');ed.querySelector('details#lang_overrides').removeAttribute('open');", "deviceSettleMs": 400 }
+      ],
+      "selectorJs": "const d=dq(document,'hui-dialog-edit-card');if(!d)return null;const ha=dq(d.shadowRoot||d,'ha-dialog');if(!ha)return null;return dq(ha.shadowRoot||ha,'dialog');",
+      "delayMs": 100
+    },
+    {
+      "name": "g2-e06-pv-open",
+      "prepareSteps": [
+        { "op": "eval", "script": "const ed=dq(document,'energiebilanz-card-editor');ed.querySelector('details#main_pv').setAttribute('open','');", "deviceSettleMs": 400 }
+      ],
+      "selectorJs": "const d=dq(document,'hui-dialog-edit-card');if(!d)return null;const ha=dq(d.shadowRoot||d,'ha-dialog');if(!ha)return null;return dq(ha.shadowRoot||ha,'dialog');",
+      "delayMs": 100
+    },
+    {
+      "name": "g2-e07-pv-closed",
+      "prepareSteps": [
+        { "op": "eval", "script": "const ed=dq(document,'energiebilanz-card-editor');ed.querySelector('details#main_pv').removeAttribute('open');", "deviceSettleMs": 400 }
+      ],
+      "selectorJs": "const d=dq(document,'hui-dialog-edit-card');if(!d)return null;const ha=dq(d.shadowRoot||d,'ha-dialog');if(!ha)return null;return dq(ha.shadowRoot||ha,'dialog');",
+      "delayMs": 100
+    },
+    {
+      "name": "g2-e08-einsp-open",
+      "prepareSteps": [
+        { "op": "eval", "script": "const ed=dq(document,'energiebilanz-card-editor');ed.querySelector('details#main_einspeisung').setAttribute('open','');", "deviceSettleMs": 400 }
+      ],
+      "selectorJs": "const d=dq(document,'hui-dialog-edit-card');if(!d)return null;const ha=dq(d.shadowRoot||d,'ha-dialog');if(!ha)return null;return dq(ha.shadowRoot||ha,'dialog');",
+      "delayMs": 100
+    },
+    {
+      "name": "g2-e09-einsp-closed",
+      "prepareSteps": [
+        { "op": "eval", "script": "const ed=dq(document,'energiebilanz-card-editor');ed.querySelector('details#main_einspeisung').removeAttribute('open');", "deviceSettleMs": 400 }
+      ],
+      "selectorJs": "const d=dq(document,'hui-dialog-edit-card');if(!d)return null;const ha=dq(d.shadowRoot||d,'ha-dialog');if(!ha)return null;return dq(ha.shadowRoot||ha,'dialog');",
+      "delayMs": 100
+    },
+    {
+      "name": "g2-e10-scroll-bottom",
+      "prepareSteps": [
+        { "op": "eval", "script": "const ed=dq(document,'energiebilanz-card-editor');if(ed){const sub=ed.querySelector('details#pv_sub_1')||ed.querySelector('details');if(sub)sub.scrollIntoView({behavior:'instant',block:'start'});}const ha=dq(dq(document,'hui-dialog-edit-card').shadowRoot||dq(document,'hui-dialog-edit-card'),'ha-dialog');const cont=ha&&(ha.shadowRoot||ha).querySelector('.content,.dialog-content,[slot=\"content\"]');if(cont)cont.scrollTop=cont.scrollHeight;", "deviceSettleMs": 800 }
+      ],
+      "selectorJs": "const d=dq(document,'hui-dialog-edit-card');if(!d)return null;const ha=dq(d.shadowRoot||d,'ha-dialog');if(!ha)return null;return dq(ha.shadowRoot||ha,'dialog');",
+      "delayMs": 200
+    },
+    {
+      "name": "g2-e11-pvsub2-open",
+      "prepareSteps": [
+        { "op": "eval", "script": "const ed=dq(document,'energiebilanz-card-editor');const det=ed&&ed.querySelector('details#pv_sub_2');if(det)det.setAttribute('open','');", "deviceSettleMs": 400 }
+      ],
+      "selectorJs": "const d=dq(document,'hui-dialog-edit-card');if(!d)return null;const ha=dq(d.shadowRoot||d,'ha-dialog');if(!ha)return null;return dq(ha.shadowRoot||ha,'dialog');",
+      "delayMs": 100
+    },
+    {
+      "name": "g2-e12-pvsub2-closed",
+      "prepareSteps": [
+        { "op": "eval", "script": "const ed=dq(document,'energiebilanz-card-editor');const det=ed&&ed.querySelector('details#pv_sub_2');if(det)det.removeAttribute('open');", "deviceSettleMs": 400 }
+      ],
+      "selectorJs": "const d=dq(document,'hui-dialog-edit-card');if(!d)return null;const ha=dq(d.shadowRoot||d,'ha-dialog');if(!ha)return null;return dq(ha.shadowRoot||ha,'dialog');",
+      "delayMs": 100
+    }
+  ]
+}
